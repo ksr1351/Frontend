@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_012_pseudo.html</title>
+    <style>
+      /*p라는 요소앞에 컨텐츠를 넣어주고 문자열을 넣어줌 */
+      p::before {
+        content: 'start';
+      }
+
+      /*p라는 요소의 맨 뒤에 사진을 넣어줌*/
+      p::after {
+        content: url(images/icon.png);
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      넷플릭스 '오징어게임'이 미 에미상에서 비영어권 작품으로는 최초로 6관왕의
+      성과를 거두면서 한국 드라마의 역사를 다시 쓰게 됐습니다.
+    </p>
+    <p>
+      넷플릭스 '오징어게임'이 미 에미상에서 비영어권 작품으로는 최초로 6관왕의
+      성과를 거두면서 한국 드라마의 역사를 다시 쓰게 됐습니다.
+    </p>
+    <p>
+      넷플릭스 '오징어게임'이 미 에미상에서 비영어권 작품으로는 최초로 6관왕의
+      성과를 거두면서 한국 드라마의 역사를 다시 쓰게 됐습니다.
+    </p>
+
+    <p>
+      넷플릭스 '오징어게임'이 미 에미상에서 비영어권 작품으로는 최초로 6관왕의
+      성과를 거두면서 한국 드라마의 역사를 다시 쓰게 됐습니다.
+    </p>
+  </body>
+</html>
