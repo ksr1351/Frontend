@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_024_menu.html</title>
+    <style>
+      /* 수평 네비게이션 */
+      * {
+            margin: 0;
+            padding: 0;
+            border-width : 0;
+      }
+
+      body {
+        margin-left: 10px;
+      }
+
+      .menulist {
+        width: 294px;
+        height: 34px;
+        background-color: yellowgreen;
+        border-left: 2px solid;
+        /* 왼쪽 테두리를 삭제하면서 제일 왼쪽 테두리도 삭제됐으므로 생성해준다. */
+      }
+
+      /* 메뉴목록은 화면에서는 감추고 기계에서는 읽도록 구현 */
+      dl.menulist dt{
+        width: 0;
+        height: 0;    /* 여기까지만 구현했을 때 세로로 나타나게 된다. */
+        font-size: 0; /* 화면에 보이지 않게된다. */
+        text-indent: -2000px; /* 한번더 화면에 보이지 않도록 안전하게 처리한다. */
+      }
+
+      /* dt를 + 설정을 하고 크기설정은 하지않는다.
+         크기 설정을 하지않으면 컨텐츠가 설정요소에 맞도록 크기가 변환되기 때문이다.*/
+      dl.menulist dd {
+        border: 2px solid;
+        float: left;
+
+        /* 테두리가 겹치는 부분은 두껍게 출력되므로 왼쪽의 테두리를 삭제한다.*/
+        border-left-width: 0;
+      }
+
+      /* a에 초록창의 크기만큼의 크기값을 설정한다
+         꼭 메뉴가 아니라 초록창 주변만 가도 마우스가 바뀐다.*/
+      dl.menulist dd a{
+        display: block; /* a는 인라인 요소이므로 block요소로 변환 */
+        width: 96px;
+        height: 30px;
+        text-align: center; /* 메뉴를 가운데로 배치 */
+
+        /* line-height: 30px; 메뉴 높이를 가운데로 배치, font를 지정하면서 같이 지정할 수 있다. */  
+        font: bold 16px/30px nanumgothic, '굴림체', dotum, sanf-serif;
+      }
+
+      dl.menulist dd a:hover {
+        text-decoration: underline; /* 마우스를 가져가면 underline이 보인다. */
+        font-size: 22px;
+        font-weight: bolder;
+
+        letter-spacing: -1px; /* 글자가 크기를 벗어날 경우를 예상하여 글씨의 간격을 조절 (- 도 가능 )*/
+        
+        background-color: black;
+        color: white;
+      }
+
+    </style>
+</head>
+<body>
+    <dl class="menulist">
+      <dt>메뉴목록
+        <dd><a href="#">교육센터</a></dd>
+        <dd><a href="#">교육안내</a></dd>
+        <dd><a href="#">교육일정</a></dd>
+      </dt>
+    </dl>
+</body>
+</html>

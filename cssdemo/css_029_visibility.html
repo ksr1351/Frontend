@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_029_visibility.html</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* display: none; 위치도 아예 사라진다. */
+        visibility: hidden; /* 사라지지만 위치는 그대로 가지고 있다. */
+        /* display 처럼 아예 사라지게 하기위한 설정 */
+        width: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>before</p>
+    <div></div>
+    <p>after</p>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_027_position.html</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      .box1 {
+        width: 500px;
+        height: 100px;
+        background-color: gray;
+      }
+
+      .box2 {
+        width: 500px;
+        height: 200px;
+        background-color: lightblue;
+        position: relative;
+      }
+
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: lightpink;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+      }
+
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+        position: relative;
+        left: 200px;
+        top: 0;
+      }
+
+      .box5 {
+        width: 100px;
+        height: 400px;
+        background-color: orange;
+        position: fixed;
+        right: 100px;
+        top: 50px;
+      }
+
+      .box6 {
+        width: 800px;
+        height: 100px;
+        background-color: lemonchiffon;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      포지션(positon) 속성
+       1. position은 박스에 대한 배치를 변경할 때 사용한다.
+       2. position의 값으로 static, absolute, relative, fixed 등이 있다.
+       3. static   : 순서에 의한 기본 위치를 지정한다.
+          absolute : 부모 요소를 기준으로 위치를 변경한다. (원래의 위치값을 잃는다.)
+          relative : 자기 자신을 기준으로 위치를 변경한다. (원래의 위치값을 가지고 있다.)
+          fixed    : 스크린을 기준으로 위치를 지정한다. (원래의 위치값을 잃는다.)
+       4. absolute의 위치 지정
+          부모요소의 position이 static이면 기준점이 body가 된다.
+          부모요소의 position이 absolute, fixed, relative이면 기준점이 부모요소이다.
+      -----------------------------------------------------------------------------------------
+      요소들의 위치는 자기자신을 기준으로 변경하는 것이 있고 부모를 기준으로 변경하는 것이 있다. 
+      div는 block 요소이므로 떠있어야하므로  position: absolute; 가 필요하고 위치 좌표를 설정한다.
+
+      position의 body를 기준으로 위치를 잡고, 기본설정이다.  
+      absolute는 부모를 기준으로 위치를 잡고, 변경되면 자신의 위치값을 잃어버린다.(다음 것이 자리 차지)
+      relative는 부모를 기준으로 위치를 잡고, 변경되어도 자신의 위치값을 잃어버리지 않는다.
+      fixed는                                         자신의 위치값을 잃어버린다. 
+    -->
+    <div class="box1"></div>
+    <div class="box2">
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <p>요소들의 위치 변경</p>
+    </div>
+
+    <div class="box5"></div>
+    <div class="box6">
+      내일(22일)부터 제주에 많은 눈이 예보된 가운데 한라산 설경버스가 임시
+      운행됩니다. 제주자치도는 한라산 설경을 만끽하려는 도민과 관광객·등산객이
+      대중교통을 편리하게 이용할 수 있도록 오는 24일부터 내년 2월 26일까지
+      토요일과 일요일·공휴일에 임시버스를 운행합니다. 임시버스는
+      제주버스터미널에서 한라병원과 어리목을 거쳐 영실매표소까지 왕복
+      운행됩니다.
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_025_imageMenu.html</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+
+      /* body {
+        margin-left: 10px;
+      } */
+
+      body div.wrap {
+        width: 1210px;
+        margin: 10px auto; /* 10px=top/bottom    auto=right/left */
+        /* background-color: lightgray; */
+      }
+
+      /* 제목 '메뉴' 크기 지정 후 텍스트 숨기기 */
+      h1 {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+        text-indent: -2000px;
+      }
+
+      /* 크기지정, ul li의 머리기호 삭제, 제일 왼쪽 테두리선 생성*/
+      ul.mainMenu {
+        width: 1208px;
+        height: 104px;
+        list-style: none;
+        border-left: 2px solid;
+      }
+
+      /* 테두리 선 넣어고 왼쪽으로 붙인 후 겹치는 왼쪽 테두리선 모두 삭제*/
+      ul.mainMenu li {
+        border: 2px solid;
+        float: left;
+        border-left-width: 0px;
+      }
+
+      /* block 요소로 변환하고 크기 변경 */
+      ul.mainMenu li a {
+        width: 300px;
+        height: 100px;
+        display: block;
+
+        /* 이미지를 넣고 난 후 텍스트는 보일 필요가 없으므로 숨기기 */
+        text-indent: -2000px;
+      }
+
+      /* 이미지 넣기 */
+      ul.mainMenu li.mail a {
+        background-image: url(images/mail.gif);
+      }
+      ul.mainMenu li.cafe a {
+        background-image: url(images/cafe.gif);
+        background-repeat: no-repeat;
+      }
+      ul.mainMenu li.blog a {
+        background-image: url(images/blog.gif);
+        background-repeat: no-repeat;
+      }
+      ul.mainMenu li.kin a {
+        background-image: url(images/kin.gif);
+        background-repeat: no-repeat;
+      }
+
+      /* 마우스 커서 때 이미지의 오른쪽이 나타나도록 구현  x축 -300px y축 0px 로 지정 */
+      /* +300px로 지정해도 출력이 되는데, 이미지의 경우 background-repeat의 기본설정이 reapeat이기 때문이다.
+         background-repeat: no-repeat;로 설정할 경우 +300px를 해도 이미지가 보이지 않는다.*/
+      ul.mainMenu li.mail a:hover {
+        background-position: +300px 0px;
+      }
+      ul.mainMenu li.cafe a:hover {
+        background-position: -300px 0px;
+      }
+      ul.mainMenu li.blog a:hover {
+        background-position: -300px 0px;
+      }
+      ul.mainMenu li.kin a:hover {
+        background-position: right bottom; /*-300px 0px;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>메뉴</h1>
+        <nav>
+          <ul class="mainMenu">
+            <li class="mail"><a href="#">메일</a></li>
+            <li class="cafe"><a href="#">카페</a></li>
+            <li class="blog"><a href="#">블로그</a></li>
+            <li class="kin"><a href="#">지식in</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>
