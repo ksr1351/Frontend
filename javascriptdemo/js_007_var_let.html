@@ -7,6 +7,20 @@
     <title>js_007_var_let.html</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      //변수선언 전 => Uncaught ReferenceError: foo is not defined
+      //변수선언 후 => foo:undefined
+      console.log(`foo:${foo}`);
+
+      //변수선언 전 => Uncaught ReferenceError: bar is not defined
+      //변수선언 후 => Uncaught ReferenceError: Cannot access 'bar' before initialization
+      //console.log(`bar:${bar}`); //초기값 할당이 되지 않음
+
+      //모든 정의는 hoisting 발생(변수나 함수 선언들을 모두 끌어올려서 해당 함수 유효 범위의 최상단에 넣기)
+      var foo;
+      let bar;
+      //bar = 1;
+      console.log(`bar:${bar}`);
+    </script>
   </body>
 </html>
