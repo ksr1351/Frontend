@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_048_popup.html</title>
+    <script defer src="js_048_popup.js"></script>
+    <style>
+      #pt {
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      (서울=연합뉴스) 김지헌 기자 = 군이 북한 무인기 도발 상황을 상정해 29일
+      합동방공훈련을 진행한다. 북한 소형 무인기 위협에 최적화된 작전 수행 체계를
+      확립하기 위해서다. 군은 북한 무인기 영공 침범에서 일차적 대응에 나서지
+      못한 지상 대공무기의 허점을 보완하고, 육군 헬기와 공군 공중전력을
+      유기적으로 통합운용해 효율성을 높이는 방안을 집중해서 훈련할 것으로
+      알려졌다. 지난 26일 북한 무인기 5대가 우리 영공을 침범하고 그중 1대는
+      서울까지 진입했으나 군은 격추하지 못했다. 이들 무인기는 2ｍ급의 소형으로
+      탐지·추적이 어려웠다.
+    </div>
+    <div id="pt">
+      <img src="images/popup.jpg" usemap="#pop" />
+
+      <map name="pop" id="pop">
+        <!--coors='x start, y start, x end, y end'-->
+        <area
+          shape="rect"
+          coords="255,332,290,345"
+          hrdf="#"
+          alt="창닫기"
+          <!--
+          onclick="window.close()"
+          --
+        />
+
+        /> /> />
+      </map>
+    </div>
+  </body>
+</html>
