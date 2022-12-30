@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>make.html</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- A -->
+    <header class="mhi top">
+      <div class="pbx top1">
+        <h1 class="logo">
+          <a href="#">
+            <img src="./images/mhi.png" alt="로고" />
+          </a>
+        </h1>
+      </div>
+      <!-- 카테고리 -->
+      <!-- left -->
+      <div class="menu top2 area">
+        <h2 class="left">
+          <ul id="category">
+            <li>
+              <a href="#">의류</a>
+              <ol>
+                <li>상의</li>
+                <li>하의</li>
+                <li>트레이닝복세트</li>
+              </ol>
+            </li>
+            <li>
+              <a href="#">가구</a>
+              <ol>
+                <li>침대</li>
+                <li>식탁</li>
+                <li>소파</li>
+              </ol>
+            </li>
+            <li>
+              <a href="#">생활용품</a>
+              <ol>
+                <li>청소용품</li>
+                <li>청소용품</li>
+                <li>생활잡화</li>
+              </ol>
+            </li>
+            <li>
+              <a href="#">데코</a>
+              <ol>
+                <li>홈갤러리</li>
+                <li>인테리어소품</li>
+                <li>DIY</li>
+              </ol>
+            </li>
+          </ul>
+        </h2>
+      </div>
+      <!-- right -->
+      <div class="member top3 area">
+        <h3 class="member">
+          <a href="#">회원가입</a>
+          <!--회원가입 html 주소 넣기-->
+          <a href="#">로그인</a>
+
+          <a href="#">게시판</a>
+          <a href="#">장바구니</a>
+          <!--장바구니 icon 넣기-->
+        </h3>
+      </div>
+    </header>
+  </body>
+  <!-- B -->
+  <section class="mhi banner">
+    <!-- 슬라이드 -->
+    <h6 class="slide_text"></h6>
+    <ul class="slide">
+      <li>
+        <a href="#">
+          <img src="./images/christmas.png" alt="슬라이드1" />
+        </a>
+      </li>
+      <li>
+        <a href="#"> <img src="./images/sss.png" alt="슬라이드2" /> </a>
+      </li>
+      <li>
+        <a href="#"> <img src="./images/ddd.png" alt="슬라이드3" /> </a>
+      </li>
+    </ul>
+  </section>
+  <!-- C -->
+  <main class="mhi cont">
+    <div class="pbx">
+      <!-- 갤러리메뉴 -->
+
+      <ol class="gallery"></ol>
+      <!-- 갤러리내용 -->
+      <li>
+        <ul class="gal">
+          <li>
+            <a href="#"></a>
+            <img src="./images/001.png" alt="갤러리이미지" />
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/002.png" alt="갤러리이미지" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/003.png" alt="갤러리이미지" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/004.png" alt="갤러리이미지" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/005.png" alt="갤러리이미지" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/006.png" alt="갤러리이미지" />
+            </a>
+          </li>
+        </ul>
+      </li>
+    </div>
+    <div class="mhi">
+      <!--이벤트팝업-->
+      <a href="#">
+        <img src="./images/event.png" alt="이벤트" />
+      </a>
+    </div>
+  </main>
+  <!-- D -->
+  <footer class="mhi info">
+    <div class="pbx info1">
+      <h5 class="logo">
+        <a href="#">
+          <img src="./images/mhi2.png" alt="로고2" />
+        </a>
+      </h5>
+    </div>
+    <div class="pbx info2">
+      <!-- 카피라잇 -->
+      Copyright Must Have Item Shopping Mall All rights reserved.
+    </div>
+    <div class="pbx info3">
+      <!-- sns -->
+      <a href="#">
+        <img src="./images/sns1.png" alt="페이스북" />
+      </a>
+      <a href="#">
+        <img src="./images/sns2.png" alt="트위터" />
+      </a>
+      <a href="#">
+        <img src="./images/sns3.png" alt="카카오톡" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- 팝업창 -->
+  <div class="pop">
+    <!-- 제목 -->
+    <h1>
+      ★소중한 사람에게 선물하세요★
+      <br />설 선물세트 예약
+    </h1>
+    <!-- 내용 -->
+    <p>
+      안녕하세요 Must.H.I 쇼핑몰입니다.
+      <br />
+      설 선물세트 예약을 진행합니다. 소중한 사람에게 마음을 전해보세요.
+      감사합니다
+    </p>
+    <!-- 버튼 박스 -->
+    <div class="bbx"><button onclick="popup(none)">닫기</button></div>
+  </div>
+</html>

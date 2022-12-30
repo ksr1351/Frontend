@@ -1,0 +1,162 @@
+@charset "UTF-8";
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: black;
+}
+a {
+  color: navy;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li {
+  float: left;
+}
+
+.mhi {
+  width: 1500px;
+  margin: 0 auto;
+}
+
+.pbx {
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.prt {
+  position: relative;
+}
+
+/***************** A ********************/
+.top {
+  position: relative;
+  z-index: 999;
+}
+
+.top1 {
+  height: 200px;
+}
+
+.top3 {
+  margin: 0px;
+  text-align: right;
+  word-spacing: 40px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.left {
+  background-color: red;
+}
+
+.left li {
+  width: 200px;
+}
+
+.left a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+
+.left ol {
+  height: 0;
+  overflow: hidden;
+  transition: height 0;
+}
+
+.left:hover ol {
+  height: 170px;
+  text-align: center;
+}
+
+.left li:hover > a {
+  color: crimson;
+}
+
+.left ol li {
+  color: black;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/********************* B ********************/
+
+.banner {
+  width: 1500px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.slide {
+  position: inherit;
+  top: 0;
+}
+
+/******************** C **********************/
+.cont pbx {
+  height: 200px;
+  text-align: center;
+}
+
+.cont > .pbx {
+  width: 400px;
+}
+
+.gallery {
+  width: 200px;
+  height: 40px;
+}
+
+.gal li {
+  margin: 18px 12px;
+}
+
+.gal img {
+  width: 100px;
+}
+
+/********************* D ***********************/
+
+.info {
+  height: 100px;
+}
+
+.info1 {
+  width: 200px;
+}
+
+.info2 {
+  width: 800px;
+  text-align: right;
+  line-height: 80px;
+}
+
+.info3 {
+  width: 200px;
+  text-align: center;
+  line-height: 107px;
+}
+
+.info3 img {
+  width: 40px;
+  margin: 0 5px;
+}

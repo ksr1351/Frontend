@@ -36,3 +36,12 @@ function chgTab(i1, i2) {
   tm[i2].classList.remove('on');
   tm[i2].classList.remove('on');
 }
+
+///////////////////////////////////////////
+// 함수명 : popup
+// 기능 : 팝업 열기/닫기
+//////////////////////////////////////////
+function popup(sts) {
+  var pop = document.querySelector('.pop');
+  pop.style.display = sts;
+}
