@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery002_selector.html</title>
+    <!-- <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        border-width: 0px;
+      }
+    </style> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('*').css({ margin: '0px', padding: '0px', 'border-width': 0 }); //모든 요소에 괄호안의 css 스타일을 적용하기
+
+        $('div').css({
+          'background-color': 'green',
+          width: '200px',
+          height: '200px',
+        });
+
+        $('#line').css({ color: 'orange' });
+
+        $('.common').css({ border: '1px solid black' });
+
+        $('a[href]').css({ color: 'aqua' });
+      });
+      // 하이픈( - ) 이 있는 경우 홑따음표 등 묶어주기
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <p id="line">line</p>
+    <p class="common">common</p>
+    <a href="#">korea</a>
+  </body>
+</html>

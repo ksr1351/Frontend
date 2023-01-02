@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery011_this.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('button').click(function () {
+          //[object HTMLButtonElement] , [object Object]
+          document.wirte(this + ',' + $(this) + '<br/>'); //일반 this는 DOM방식 / $(this)는 jQuery 방식
+
+          //BODY
+          document.write(this.parentNode.nodeName + '<br/>');
+
+          //BODY
+          document.write($(this).parent()[0].nodeName);
+          document.write($(this).prop('tagName')); //어떤 요소의 속성값 가져오기(prop)
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+  </body>
+</html>

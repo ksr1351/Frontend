@@ -112,6 +112,10 @@ li {
 }
 
 /******************** C **********************/
+.pbx ul {
+  list-style: none;
+}
+
 .cont pbx {
   height: 200px;
   text-align: center;

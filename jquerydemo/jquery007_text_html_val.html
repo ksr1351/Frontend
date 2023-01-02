@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery007_text_html_val.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //value => val()
+        //innerText => text()
+        //innerHTML => html()
+
+        let dnode1 = $('div').text(); //div요소에서 text(javascript)만 가져오기
+        console.log(dnode1);
+
+        let dnode2 = $('div').html(); //div요소에서 html가져오기(span을 포함해서 가져옴)
+        console.log(dnode2);
+
+        let dnode3 = $('input').val(); //input요소에 있는 value속성의 값 가져오기(jQuery)
+        console.log(dnode3);
+      });
+    </script>
+  </head>
+  <body>
+    <button>click</button>
+    <div><span>javascript</span></div>
+    <input type="text" value="jQuery" />
+  </body>
+</html>
