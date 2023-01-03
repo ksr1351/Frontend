@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery022_pageNumber.html</title>
+    <style>
+      ol.paging {
+        list-style-type: none;
+      }
+
+      ol li {
+        float: left;
+        margin-right: 8px;
+      }
+
+      ol li a {
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 3px 7px;
+        color: #000000;
+      }
+
+      ol.paging li a.cbox,
+      ol.paging li a:hover {
+        background-color: #00b3bc;
+        color: white;
+        font-weight: bolder;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+      /* 페이지가 선택되면 선택된 페이지색이 계속 고정되도록 구현 
+         ol의 class=paging의 li의 a에서 click이벤트가 발생되면 ol.paging li a.cbox를 지운다.
+         그리고 현재 클릭한 this를 cbox클래스를 추가하여 페이지 색이 고정되도록 한다. 
+      */
+      $(document).ready(function () {
+        $("ol.paging li a").click(function (e) {
+          $("ol.paging li a").removeClass("cbox");
+          $(this).addClass("cbox");
+
+          return false; //e.prventDefault();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ol class="paging">
+      <li><a href="">이전으로</a></li>
+      <li><a href="" class="cbox">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">다음으로</a></li>
+    </ol>
+  </body>
+</html>

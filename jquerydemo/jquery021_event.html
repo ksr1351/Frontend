@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery021_event.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      /* 여러개의 이벤트를 걸때는 on()메소드를 사용한다. */
+      $(document).ready(function () {
+        $("input").on("focus mouseover", function () {
+          $("div").css({ "background-color": "yellowgreen" });
+        });
+
+        $("#fid").keyup(function () {
+          $("p").text($(this).val());
+        });
+
+        $("#fname").keydown(function () {
+          $("p").text($(this).val());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div><input type="text" name="id" id="fid" /></div>
+
+    <button>keyboard</button>
+
+    <input type="text" name="id" id="fname" />
+    <p></p>
+  </body>
+</html>
